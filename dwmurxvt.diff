@@ -1,0 +1,29 @@
+--- config.def.h	2011-12-19 09:02:46.000000000 -0600
++++ config.h	2013-10-20 02:36:02.259089885 -0500
+@@ -14,7 +14,7 @@
+ static const Bool topbar            = True;     /* False means bottom bar */
+ 
+ /* tagging */
+-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
++static const char *tags[] = { "main", "web", "emacs", "misc" };
+ 
+ static const Rule rules[] = {
+ 	/* class      instance    title       tags mask     isfloating   monitor */
+@@ -47,7 +47,7 @@
+ 
+ /* commands */
+ static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+-static const char *termcmd[]  = { "uxterm", NULL };
++static const char *termcmd[]  = { "urxvt", NULL };
+ 
+ static Key keys[] = {
+ 	/* modifier                     key        function        argument */
+@@ -62,7 +62,7 @@
+ 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+ 	{ MODKEY,                       XK_Return, zoom,           {0} },
+ 	{ MODKEY,                       XK_Tab,    view,           {0} },
+-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
++	{ MODKEY|ShiftMask,             XK_x,      killclient,     {0} },
+ 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+ 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+ 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
