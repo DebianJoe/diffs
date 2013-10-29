@@ -1,0 +1,47 @@
+--- config.def.h	2011-12-19 09:02:46.000000000 -0600
++++ config.h	2013-10-29 00:20:41.107070232 -0500
+@@ -2,19 +2,19 @@
+ 
+ /* appearance */
+ static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
+-static const char normbordercolor[] = "#444444";
+-static const char normbgcolor[]     = "#222222";
+-static const char normfgcolor[]     = "#bbbbbb";
+-static const char selbordercolor[]  = "#005577";
+-static const char selbgcolor[]      = "#005577";
+-static const char selfgcolor[]      = "#eeeeee";
++static const char normbordercolor[] = "#936a6f";
++static const char normbgcolor[]     = "#f1eee9"; /*unselected bar background*/
++static const char normfgcolor[]     = "#936a6f"; /*foreground text*/
++static const char selbordercolor[]  = "#637e7b"; /*selected boarder color*/
++static const char selbgcolor[]      = "#9a9a9a"; /*selected background color */
++static const char selfgcolor[]      = "#637e7b"; /*selected cell text color */
+ static const unsigned int borderpx  = 1;        /* border pixel of windows */
+ static const unsigned int snap      = 32;       /* snap pixel */
+ static const Bool showbar           = True;     /* False means no bar */
+ static const Bool topbar            = True;     /* False means bottom bar */
+ 
+ /* tagging */
+-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
++static const char *tags[] = { "main", "web", "emacs", "misc" };
+ 
+ static const Rule rules[] = {
+ 	/* class      instance    title       tags mask     isfloating   monitor */
+@@ -47,7 +47,7 @@
+ 
+ /* commands */
+ static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+-static const char *termcmd[]  = { "uxterm", NULL };
++static const char *termcmd[]  = { "urxvt", NULL };
+ 
+ static Key keys[] = {
+ 	/* modifier                     key        function        argument */
+@@ -62,7 +62,7 @@
+ 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+ 	{ MODKEY,                       XK_Return, zoom,           {0} },
+ 	{ MODKEY,                       XK_Tab,    view,           {0} },
+-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
++	{ MODKEY|ShiftMask,             XK_x,      killclient,     {0} },
+ 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+ 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+ 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
