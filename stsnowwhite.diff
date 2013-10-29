@@ -1,0 +1,75 @@
+--- config.def.h	2013-04-20 08:29:39.000000000 -0500
++++ config.h	2013-10-29 00:57:04.472774408 -0500
+@@ -5,9 +5,9 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char font[] = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
++static char font[] = "DejaVuSansMono:pixelsize=9:antialias=true:autohint=false";
+ static int borderpx = 2;
+-static char shell[] = "/bin/sh";
++static char shell[] = "/bin/bash";
+ 
+ /* timeouts (in milliseconds) */
+ static unsigned int doubleclicktimeout = 300;
+@@ -29,29 +29,30 @@
+ /* Terminal colors (16 first used in escape sequence) */
+ static const char *colorname[] = {
+ 	/* 8 normal colors */
+-	"black",
+-	"red3",
+-	"green3",
+-	"yellow3",
+-	"blue2",
+-	"magenta3",
+-	"cyan3",
+-	"gray90",
++    "#757475", /*color 0*/
++    "#936a6f", /*color 1*/
++    "#668462", /*color 2*/
++    "#7f7b62", /*color 3*/
++    "#6e7291", /*color 4*/
++    "#846887", /*color 5*/
++    "#637e7b", /*color 6*/
++    "#9a9a9a", /*color 7*/
+ 
+ 	/* 8 bright colors */
+-	"gray50",
+-	"red",
+-	"green",
+-	"yellow",
+-	"#5c5cff",
+-	"magenta",
+-	"cyan",
+-	"white",
++    "#4a4a4a", /*color 8*/
++    "#d76572", /*color 9*/
++    "#4fae42", /*color 10*/
++    "#a8981f", /*color 11*/
++    "#7782cf", /*color 12*/
++    "#b754c4", /*color 13*/
++    "#2ea89a", /*color 14*/
++    "#c4c4c4", /*color 15*/
+ 
+ 	[255] = 0,
+ 
+ 	/* more colors can be added after 255 to use with DefaultXX */
+-	"#cccccc",
++	"#ffffff",
++    "#b2b3b8",
+ };
+ 
+ 
+@@ -59,9 +60,9 @@
+  * Default colors (colorname index)
+  * foreground, background, cursor
+  */
+-static unsigned int defaultfg = 7;
+-static unsigned int defaultbg = 0;
+-static unsigned int defaultcs = 256;
++static unsigned int defaultfg = 257;
++static unsigned int defaultbg = 256;
++static unsigned int defaultcs = 15;
+ 
+ /*
+  * Colors used, when the specific fg == defaultfg. So in reverse mode this
