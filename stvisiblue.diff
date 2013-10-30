@@ -5,11 +5,11 @@
   * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
   */
 -static char font[] = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
-+static char font[] = "DejaVuSansMono:pixelsize=11:antialias=true:autohint=false";
++static char font[] = "DejaVuSansMono:pixelsize=10:antialias=true:autohint=false";
  static int borderpx = 2;
 -static char shell[] = "/bin/sh";
 +static char shell[] = "/bin/bash";
- 
+
  /* timeouts (in milliseconds) */
  static unsigned int doubleclicktimeout = 300;
 @@ -29,24 +29,24 @@
@@ -32,7 +32,7 @@
 +    "#0066FF", /*color 5*/
 +    "#669999", /*color 6*/
 +    "#99CCCC", /*color 7*/
- 
+
  	/* 8 bright colors */
 -	"gray50",
 -	"red",
@@ -50,6 +50,5 @@
 +    "#0099FF", /*color 13*/
 +    "#66CCCC", /*color 14*/
 +    "#CCFFFF", /*color 15*/
- 
+
  	[255] = 0,
- 
