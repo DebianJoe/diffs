@@ -1,0 +1,53 @@
+--- config.def.h	2013-08-06 21:37:38.781264444 -0500
++++ config.h	2013-11-01 03:25:25.109513832 -0500
+@@ -1,20 +1,20 @@
+ /* See LICENSE file for copyright and license details. */
+ 
+ /* appearance */
+-static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
+-static const char normbordercolor[] = "#444444";
+-static const char normbgcolor[]     = "#222222";
++static const char font[]            = "-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*";
++static const char normbordercolor[] = "#515C43";
++static const char normbgcolor[]     = "#001a00";
+ static const char normfgcolor[]     = "#bbbbbb";
+-static const char selbordercolor[]  = "#005577";
+-static const char selbgcolor[]      = "#005577";
+-static const char selfgcolor[]      = "#eeeeee";
++static const char selbordercolor[]  = "#411301";
++static const char selbgcolor[]      = "#516c43";
++static const char selfgcolor[]      = "#411301";
+ static const unsigned int borderpx  = 1;        /* border pixel of windows */
+ static const unsigned int snap      = 32;       /* snap pixel */
+ static const Bool showbar           = True;     /* False means no bar */
+ static const Bool topbar            = True;     /* False means bottom bar */
+ 
+ /* tagging */
+-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
++static const char *tags[] = { "main", "web", "vim", "emacs", "misc"};
+ 
+ static const Rule rules[] = {
+ 	/* class      instance    title       tags mask     isfloating   monitor */
+@@ -51,7 +51,7 @@
+ 
+ /* commands */
+ static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+-static const char *termcmd[]  = { "uxterm", NULL };
++static const char *termcmd[]  = { "st", NULL };
+ 
+ static Key keys[] = {
+ 	/* modifier                     key        function        argument */
+@@ -66,7 +66,7 @@
+ 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+ 	{ MODKEY,                       XK_Return, zoom,           {0} },
+ 	{ MODKEY,                       XK_Tab,    view,           {0} },
+-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
++	{ MODKEY|ShiftMask,             XK_x,      killclient,     {0} },
+ 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+ 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+ 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+@@ -106,4 +106,3 @@
+ 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
+ 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+ };
+-
